@@ -1,0 +1,493 @@
+/* -------- Panels --------*/
+
+
+/* -------- Annotations -------- */
+
+.annotation {
+    display: inline-block;
+    font-size: 16pt;
+    height: 35px;
+    text-align: center;
+    width: 35px;
+}
+
+.annotateNote:after {
+    border-color: #FFFFFF transparent;
+    border-style: solid;
+    border-width: 9px 9px 0;
+    bottom: -9px;
+    content: "";
+    display: block;
+    left: 11px;
+    position: absolute;
+    width: 0;
+}
+
+.annotateNote:before {
+    border-color: #5A8F00 transparent;
+    border-style: solid;
+    border-width: 10px 10px 0;
+    bottom: -10px;
+    content: "";
+    display: block;
+    left: 10px;
+    position: absolute;
+    width: 0;
+}
+
+.annotateNote {
+    border: 1px solid #5A8F00;
+    border-radius: 10px 10px 10px 10px;
+    color: #333333;
+    display: inline-block;
+    /*margin: 1em 0 3em;
+        padding: 4px;*/
+    position: absolute;
+    height: 32px;
+    width: 38px;
+    z-Index: 8500;
+}
+
+.annotateNote.shadow:before {
+    border-color: rgba(128, 128, 128, 0.25) transparent;
+    border-style: solid;
+    border-width: 10px 10px 0;
+    bottom: -10px;
+    content: "";
+    display: block;
+    left: 10px;
+    position: absolute;
+    width: 0;
+}
+
+.annotateNote.shadow {
+    background: rgba(128, 128, 128, 0.25);
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 10px 10px 10px 10px;
+    display: inline-block;
+    position: absolute;
+    height: 32px;
+    width: 38px;
+    z-Index: 8000;
+}
+
+/*
+.annotateNote {
+    background-image: url('../images/sprite.png');
+    background-position: -43px -100px;
+    color: #222;
+    display: inline-block;
+
+}*/
+/* -------- Modal and Crosshair --------*/
+
+.modal {
+    background-color: rgba(0,0,0,0.75);
+    box-shadow: none !important;
+    border: 0px;
+    display: inline-block;
+    position: absolute;
+}
+
+#crosshair {
+    border: 1px dashed #0FF;
+    min-width: 150px;
+    min-height: 50px;
+    position: absolute;
+    z-Index: 8000
+}
+
+#crosshairTitlebox {
+    background-color: #FFF;
+    border-bottom: 1px solid black;
+    height: 24px;
+    left: 0;
+    min-width: 150px;
+    position: absolute;
+    top: 0;
+    z-Index: 8000;
+}
+
+#crosshairTitlebox > span {
+    color: #000;
+    font-weight: bold;
+    margin-left: 8px;
+    position: absolute;
+    top: 4px;
+}
+
+#crosshair > span.movebox.smbtn {
+    background-image: url('../images/sprite.png');
+    background-position: -253px -38px;
+    cursor: se-resize;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+}
+
+#crosshair > span.movebox.smbtn:active {
+    background-position: -253px -57px;
+}
+
+#crosshairTitlebox > span.watch.smbtn {
+    background-image: url('../images/sprite.png');
+    background-position: -233px -38px;
+    cursor: cursor;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+
+#crosshairTitlebox > span.watch.smbtn:hover {
+    background-position: -233px -57px;
+}
+
+/* -------- Notebox -------- */
+
+.noteBox {
+    border: 1px solid grey;
+    background: #FFF;
+    color: #000;
+    display: inline-block;
+    font-size: 10pt;
+    font-weight: normal;
+    left: 0;
+    margin: 0px;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    text-align: left;
+    width: 350px;
+}
+
+.arrowleft {
+    background-image: url('../images/sprite.png');
+    background-position: -80px -100px;
+}
+
+.arrowright {
+    background-image: url('../images/sprite.png');
+    background-position: -100px -100px;
+}
+
+.noteBox > label {
+    text-align: left;
+    width: 70px;
+}
+
+.noteBox input, .noteBox select, .noteBox textarea {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 0;
+    position: absolute;
+    right: 8px;
+    width: 268px;
+}
+
+.noteBox select { width: 272px;}
+
+.noteBox textarea {
+    min-height: 5em;
+}
+
+.noteBox > div {
+    font-size: 10pt;
+    margin: 4px 8px;
+    text-align: center;
+}
+
+.noteActions {
+    margin-top: 56px;
+}
+
+
+.noteBox ul {
+    background-color: white;
+    border-top: 1px solid #a0a0a0;
+    border-bottom: 1px solid #a0a0a0;
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    max-height: 250px;
+    overflow: auto;
+    padding: 0;
+    padding-top: 8px;
+    width: 100%;
+}
+
+.noteBox ul li {
+    background-color: white;
+    color: #444;
+    font-size: 8pt;
+    margin: 0px;
+    margin-left: 16px;
+    padding: 0px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.noteBox ul li:nth-child(even) {
+    background-color: #d8d8d8;
+}
+
+.noteBox ul li:nth-child(odd) {
+    background-color: #fff;
+}
+
+.noteBox ul li div {
+    border-bottom: 1px dotted #a0a0a0;
+    padding: 2px 8px;
+}
+
+span.user {
+    padding-left: 4px;
+    color: #0e79c7;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+span.datetime {
+    color: #ffa217;
+    float: right;
+    font-size: 8pt;
+    font-weight: normal;
+}
+
+span.comment {
+    color: #444;
+    display: block;
+    font-size: 8pt;
+    padding: 0px 8px;
+    margin: 4px 0 8px;
+}
+
+.arrowleft, .arrowright {
+    display: inline-block;
+    height: 32px;
+    margin: 0!important;
+    padding: 0!important;
+    position: absolute;
+    width: 16px;
+}
+
+.arrow.small.right {
+    background-image: url('../images/sprite.png');
+    background-position: -106px -62px;
+    display: inline-block;
+    height: 7px;
+    width: 4px;
+}
+
+/* -------- Misc -------- */
+
+ul#annotation_leftmenu {
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+ul#annotateMenu li > * {
+    display: inline-block;
+}
+
+/* -------- Toggle button -------- */
+
+.toggle_off, .toggle_on {
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border: 2px solid #404040;
+    color: #000000;
+    display: inline-block;
+    margin-left: 16px;
+    margin-right: 5px;
+    padding: 0 0px;
+    width: 50px;
+}
+
+.toggle_off {
+    background: #cccccc;
+    padding-right: 5px;
+    text-align: right;
+}
+
+.toggle_on {
+    background: #33cccc;
+    padding-left: 5px;
+    text-align: left;
+}
+
+.toggle_off > div, .toggle_on > div {
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    background: #ffffff;
+    border: 2px solid #404040;
+    display: block;
+    height: 17px;
+    width: 17px;
+}
+
+.toggle_off > div {
+    float: left;
+}
+
+.toggle_on > div {
+    float: right;
+}
+
+/* ------- Sprites -------- */
+
+.annotateTab {
+    background-image: url('../images/sprite.png');
+    background-position: 0 0;
+    display: inline-block;
+    height: 138px;
+    position: absolute;
+    right: -44px;
+    top: 39px;
+    width: 43px;
+}
+
+.annotateTab.closed > span.smbtn {
+    background-image: url('../images/sprite.png');
+    background-position: -195px 0;
+    position: absolute;
+    right: 14px;
+    top: 61px;
+    height: 17px;
+    width: 15px;
+}
+
+.annotateTab.closed > span.smbtn:active {
+    background-position: -195px -19px;
+}
+
+.annotateTab.open > span.smbtn {
+    background-image: url('../images/sprite.png');
+    background-position: -176px 0;
+    position: absolute;
+    right: 14px;
+    top: 61px;
+    height: 17px;
+    width: 15px;
+}
+
+.annotateTab.open > span.smbtn:active {
+    background-position: -176px -19px;
+}
+
+.Refresh.smbtn {
+    background: url("../images/sprite.png");
+    background-position: -138px -40px;
+    display: inline-block;
+    margin-left: 5%;
+    margin-top: 6px;
+    vertical-align: bottom;
+    height: 17px;
+    width: 17px;
+}
+
+.Refresh.smbtn:active {
+    background-position: -138px -59px;
+}
+
+.Annotate.smbtn {
+    background: url("../images/sprite.png") center center;
+    background-position: -42px -61px;
+}
+
+.Annotate.smbtn:active {
+    background-position: -42px -80px;
+}
+
+.annotateInfo.smbtn {
+    background: url("../images/sprite.png");
+    background-position: -157px -38px;
+    display: inline-block;
+    left: 0px;
+    top: 0px;
+}
+
+.annotateInfo.smbtn:active {
+    background-position: -157px -57px;
+}
+
+.Annotate.lgbtn {
+    background: url("../images/sprite.png") center center;
+    background-position: -43px 0px;
+}
+
+.Annotate.lgbtn:active {
+    background-position: -43px -31px;
+}
+
+.notebtn {
+    background-color: #4299ca;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2JhKDY2LDE1MywyMDIsMSk7IiAvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6cmdiYSgzMiwxMTksMTY4LDEpOyIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCBmaWxsPSJ1cmwoI2dyYWRpZW50KSIgaGVpZ2h0PSIxMDAlIiB3aWR0aD0iMTAwJSIgLz48L3N2Zz4=);    /* SVG fallback(Opera 11.10-, IE9) */
+    background: -o-linear-gradient(top, rgba(66,153,202,1), rgba(32,119,168,1));                                                        /* Opera 11.10+ */
+    background: -moz-linear-gradient(top, rgba(66,153,202,1), rgba(32,119,168,1));                                                      /* Firefox 3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(66,153,202,1)), color-stop(1, rgba(32,119,168,1)));  /* Chrome 7+ & Safari 5.03+ */
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#FF4299CA,EndColorStr=#FF2077A8);                   /* IE5.5 - IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#FF4299CA,EndColorStr=#FF2077A8)"              /* IE8 */
+    border: #222;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0px 2px;
+    padding: 2px 8px;
+    text-shadow: -1px -1px #666;
+}
+
+.notebtn:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.notebtn:active {
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2JhKDMyLDExOSwxNjgsMSk7IiAvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6cmdiYSgwLDg1LDEzNCwxKTsiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNncmFkaWVudCkiIGhlaWdodD0iMTAwJSIgd2lkdGg9IjEwMCUiIC8+PC9zdmc+);    /* SVG fallback(Opera 11.10-, IE9) */
+    background: -o-linear-gradient(top, rgba(32,119,168,1), rgba(0,85,134,1));                                                          /* Opera 11.10+ */
+    background: -moz-linear-gradient(top, rgba(32,119,168,1), rgba(0,85,134,1));                                                        /* Firefox 3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(32,119,168,1)), color-stop(1, rgba(0,85,134,1)));    /* Chrome 7+ & Safari 5.03+ */
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#FF2077A8,EndColorStr=#FF005586);                   /* IE5.5 - IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#FF2077A8,EndColorStr=#FF005586)"              /* IE8 */
+    border-style: inset;
+    color: #fff;
+}
+
+/* Styles not currently used
+.annotateNote.Completed {
+
+}
+
+.annotate.Change {
+    background-color: #FFFFD0;
+}
+
+.annotate.Updated {
+    background-color: #D0FFD0;
+}
+
+.annotateDelete.smbtn {
+    background: url("../images/sprite.png");
+    background-position: -176px -38px;
+    display: inline-block;
+    right: 0px;
+    top: 0px;
+}
+
+.annotateDelete.sbtn:active {
+    background-position: -176px -57px;
+}
+
+.noteClose.smbtn {
+    background: url("../images/sprite.png");
+    background-position: -176px -38px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 4px;
+    position: absolute;
+    right: 0;
+}
+*/
